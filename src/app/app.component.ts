@@ -5,6 +5,19 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
-  title = 'baseangular';
+  public titulo: string = 'Hola mundo';
+  public contador: number = 10;
+
+  incrementarValor(value: number): void {
+    this.contador += value;
+  }
+
+  reiniciar(): void {
+    this.contador = 10;
+  }
 }
+
+
+

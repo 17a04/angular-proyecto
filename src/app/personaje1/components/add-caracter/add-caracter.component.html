@@ -1,0 +1,40 @@
+<h4>Agregar Caricatura</h4>
+<form class="row" (ngSubmit)="enviarCaracteres()">
+  <input 
+    type="text"
+    [(ngModel)]="caracter.name"
+    name="nombre"
+    class="form-control mb-3"
+    placeholder="Nombre"
+    required> <!-- Campo obligatorio -->
+
+  <input 
+    type="number"
+    name="tiempo"
+    [(ngModel)]="caracter.tiempo"
+    class="form-control mb-3"
+    placeholder="Año"
+    required> <!-- Campo obligatorio -->
+
+  <input 
+    type="number"
+    name="nivel"
+    [(ngModel)]="caracter.nivel"
+    class="form-control mb-3"
+    placeholder="Nivel"
+    required>
+
+  <input 
+    type="number"
+    name="vistas"
+    [(ngModel)]="caracter.vistas"
+    class="form-control mb-3"
+    placeholder="vistas "
+    required>
+
+  <button type="submit" class="btn btn-primary">
+    Agregar
+  </button>
+
+  <pre>{{ caracter | json }}</pre>
+</form>
